@@ -3,236 +3,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hall Roofing & Building Services | Bolton Roofing Specialists</title>
-  <meta name="description" content="Expert roofing contractors in Breightmet, Bolton. GRP flat roofs, slate roof repairs, and emergency leak fixes.">
+  <title>Hall Roofing & Building Services | Bolton Specialists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --navy: #0f172a;
-      --navy-light: #1e293b;
-      --red: #dc2626;
-      --red-hover: #b91c1c;
-      --gold: #d97706;
-      --text: #334155;
-      --text-muted: #64748b;
-      --light-bg: #f8fafc;
+      --primary: #0b132b;
+      --secondary: #1c2541;
+      --red: #e63946;
+      --red-dark: #c1121f;
+      --gold: #d4af37;
+      --light: #f8fafc;
+      --dark-text: #1e293b;
+      --muted: #64748b;
       --white: #ffffff;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--light-bg); color: var(--text); line-height: 1.6; padding-bottom: 75px; overflow-x: hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background-color: #f1f5f9; color: var(--dark-text); line-height: 1.6; padding-bottom: 80px; }
 
-    /* Header & Navigation */
-    header { background: var(--navy); padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--red); position: sticky; top: 0; z-index: 100; }
-    .logo-container img { height: 45px; object-fit: contain; }
-    .header-btn { background: var(--red); color: var(--white); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+    /* Top Bar */
+    .top-bar { background: #070d1e; color: #94a3b8; font-size: 0.78rem; padding: 0.4rem 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+    /* Header */
+    header { background: var(--primary); padding: 0.9rem 1.2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--red); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .logo-box img { height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+    .header-cta { background: var(--red); color: var(--white); padding: 0.6rem 1.1rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4); }
 
     /* Hero Section */
-    .hero { background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('hall-active-site.jpg') center/cover; color: var(--white); text-align: center; padding: 3.5rem 1.2rem 2.5rem; }
-    .hero-badge { display: inline-block; background: rgba(220, 38, 38, 0.2); color: #fca5a5; border: 1px solid var(--red); padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 700; border-radius: 20px; margin-bottom: 1.2rem; }
-    .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.25; margin-bottom: 1rem; }
-    .hero p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 1.8rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-    
-    .cta-group { display: flex; flex-direction: column; gap: 0.8rem; max-width: 340px; margin: 0 auto; }
-    .btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0.9rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 1rem; transition: transform 0.2s; }
-    .btn:active { transform: scale(0.98); }
-    .btn-red { background: var(--red); color: var(--white); }
-    .btn-wa { background: #16a34a; color: var(--white); }
+    .hero { background: linear-gradient(rgba(11, 19, 43, 0.92), rgba(11, 19, 43, 0.88)), url('hall-active-site.jpg') center/cover no-repeat; color: var(--white); text-align: center; padding: 3.5rem 1.2rem 3rem; position: relative; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(230, 57, 70, 0.15); border: 1px solid var(--red); color: #ffb4a2; padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero h1 { font-size: 2.1rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .hero h1 span { color: var(--red); }
+    .hero p { font-size: 0.98rem; opacity: 0.9; max-width: 550px; margin: 0 auto 2rem; color: #cbd5e1; }
 
-    /* Animated Stats Bar */
-    .stats-bar { background: var(--navy-light); color: var(--white); padding: 1.5rem 1rem; display: flex; justify-content: space-around; text-align: center; border-bottom: 1px solid #334155; }
-    .stat-item h3 { font-size: 1.8rem; font-weight: 800; color: #fbbf24; }
-    .stat-item p { font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; margin-top: 0.2rem; }
+    /* Inline Form Card */
+    .quote-box { background: var(--white); border-radius: 12px; padding: 1.5rem; max-width: 500px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.25); text-align: left; border-top: 4px solid var(--red); }
+    .quote-box h3 { color: var(--primary); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .quote-box p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.7rem; }
+    .input-field { padding: 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; }
+    .input-field:focus { border-color: var(--red); }
+    .btn-submit { background: var(--red); color: var(--white); padding: 0.95rem; border: none; border-radius: 6px; font-weight: 800; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 15px rgba(230, 57, 70, 0.35); text-decoration: none; }
 
-    /* Standard Section */
-    .section { padding: 2.8rem 1.2rem; max-width: 700px; margin: 0 auto; }
-    .section-tag { color: var(--red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; text-align: center; display: block; margin-bottom: 0.4rem; }
-    .section-title { text-align: center; font-size: 1.6rem; color: var(--navy); font-weight: 800; margin-bottom: 1.8rem; }
+    /* Animated Counter Bar */
+    .counter-bar { background: var(--secondary); color: var(--white); display: flex; justify-content: space-around; padding: 1.8rem 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .counter-val { font-size: 1.9rem; font-weight: 800; color: var(--gold); }
+    .counter-lbl { font-size: 0.72rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-top: 0.2rem; letter-spacing: 0.5px; }
 
-    /* Service Cards (Matching Design 2) */
-    .service-grid { display: grid; gap: 1.4rem; }
-    .service-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.06); border-top: 4px solid var(--red); }
-    .service-card img { width: 100%; height: 210px; object-fit: cover; }
-    .service-body { padding: 1.2rem; }
-    .service-body h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 0.5rem; }
-    .service-body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; }
+    /* Services Section */
+    .section { padding: 3.2rem 1.2rem; max-width: 650px; margin: 0 auto; }
+    .section-head { text-align: center; margin-bottom: 2rem; }
+    .section-tag { color: var(--red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+    .section-title { font-size: 1.7rem; font-weight: 800; color: var(--primary); margin-top: 0.3rem; letter-spacing: -0.5px; }
 
-    /* Google Reviews Section & Carousel */
-    .reviews-wrapper { background: var(--navy); color: var(--white); border-radius: 16px; padding: 2rem 1.2rem; text-align: center; margin-top: 1rem; position: relative; overflow: hidden; }
-    .google-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 1.2rem; }
-    
-    .carousel-slide { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
-    .carousel-slide.active { display: block; opacity: 1; }
-    .stars { color: #f59e0b; font-size: 1.2rem; margin-bottom: 0.8rem; }
-    .review-quote { font-size: 0.95rem; font-style: italic; opacity: 0.95; line-height: 1.6; margin-bottom: 1rem; }
-    .reviewer-name { font-weight: 800; font-size: 1rem; color: #f87171; }
-    .reviewer-meta { font-size: 0.75rem; color: #94a3b8; }
+    .service-card-pro { background: var(--white); border-radius: 14px; overflow: hidden; margin-bottom: 1.8rem; box-shadow: 0 10px 25px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; transition: transform 0.2s; }
+    .service-card-pro:hover { transform: translateY(-3px); }
+    .service-card-pro img { width: 100%; height: 230px; object-fit: cover; }
+    .service-content { padding: 1.4rem; }
+    .service-content h3 { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem; }
+    .service-content p { font-size: 0.92rem; color: var(--muted); line-height: 1.55; margin-bottom: 1rem; }
+    .service-features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .service-features span { background: #f1f5f9; color: var(--secondary); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border-left: 2px solid var(--red); }
 
-    .carousel-dots { display: flex; justify-content: center; gap: 6px; margin-top: 1.2rem; }
-    .dot { width: 8px; height: 8px; background: #475569; border-radius: 50%; transition: background 0.3s; }
-    .dot.active { background: var(--red); width: 22px; border-radius: 4px; }
+    /* Trust & Guarantee Box */
+    .trust-box { background: var(--primary); color: var(--white); border-radius: 14px; padding: 2rem 1.4rem; margin-bottom: 2rem; border-left: 5px solid var(--gold); }
+    .trust-box h3 { font-size: 1.3rem; margin-bottom: 0.6rem; color: var(--gold); }
+    .trust-box p { font-size: 0.92rem; color: #cbd5e1; line-height: 1.6; }
 
-    /* Sticky Bottom Bar (Mobile Conversion) */
-    .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); display: flex; border-top: 1px solid #e2e8f0; padding: 0.6rem 1rem; gap: 0.8rem; z-index: 200; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); }
-    .bottom-bar a { flex: 1; text-align: center; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; }
+    /* Google Reviews Card */
+    .reviews-section { background: var(--secondary); color: var(--white); border-radius: 16px; padding: 2.2rem 1.2rem; text-align: center; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+    .review-bubble { min-height: 180px; display: flex; flex-direction: column; justify-content: center; }
+    .review-quote-text { font-size: 1rem; font-style: italic; color: #f8fafc; line-height: 1.6; margin-bottom: 1.2rem; }
+    .reviewer-tag { font-weight: 800; font-size: 1.05rem; color: #fca5a5; }
+    .reviewer-sub { font-size: 0.78rem; color: #94a3b8; margin-top: 0.2rem; }
 
-    /* Scroll Animation */
-    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* Sticky Bottom Mobile Bar */
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); border-top: 1px solid #e2e8f0; padding: 0.65rem 1rem; display: flex; gap: 0.8rem; z-index: 999; box-shadow: 0 -5px 15px rgba(0,0,0,0.08); }
+    .sticky-btn { flex: 1; text-align: center; padding: 0.85rem; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .sticky-call { background: var(--primary); color: var(--white); }
+    .sticky-wa { background: #16a34a; color: var(--white); }
   </style>
 </head>
 <body>
 
+  <!-- Top Info Strip -->
+  <div class="top-bar">📍 Breightmet, Bolton & Greater Manchester • Fully Certified</div>
+
   <!-- Header -->
   <header>
-    <div class="logo-container">
+    <div class="logo-box">
       <img src="hall-logo.png" alt="Hall Roofing and Building Services">
     </div>
-    <a href="tel:+447961421976" class="header-btn">📞 07961 421976</a>
+    <a href="tel:+447961421976" class="header-cta">📞 07961 421976</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-badge">⭐ 5.0 Rated Local Roofing Specialists</div>
-    <h1>Roofing Is Our Heritage, Quality Is Our Tradition</h1>
-    <p>Complete new roof installations, GRP flat roofing, and emergency leak repairs across Bolton & Greater Manchester.</p>
-    <div class="cta-group">
-      <a href="tel:+447961421976" class="btn btn-red">📞 Book Roofing Inspection</a>
-      <a href="https://wa.me/447961421976?text=Hi%20Marten,%20I%20would%20like%20a%20free%20quote%20for%20roofing." class="btn btn-wa">💬 WhatsApp Free Quote</a>
+    <div class="badge-pill">⭐ 5.0 Google Verified Local Contractor</div>
+    <h1>Roofing Is Our Heritage, <span>Quality Is Our Tradition</span></h1>
+    <p>Professional re-roofs, seamless GRP fibreglass flat roofing, and emergency leak repairs built for decades of UK weather.</p>
+
+    <!-- Instant Inspection Request Card (Design 2 Layout) -->
+    <div class="quote-box">
+      <h3>Book Roofing Inspection</h3>
+      <p>Need urgent repairs or a new roof quote in Bolton? Message us directly.</p>
+      <div class="form-group">
+        <a href="tel:+447961421976" class="btn-submit">📞 Call Marten: 07961 421976</a>
+        <a href="https://wa.me/447961421976?text=Hi%20Marten,%20I%20need%20a%20roofing%20quote%20for%20my%20property%20in%20Bolton." class="btn-submit" style="background: #16a34a;">💬 WhatsApp Free Estimate</a>
+      </div>
     </div>
   </section>
 
-  <!-- Fast Animated Stats Bar -->
-  <div class="stats-bar">
-    <div class="stat-item">
-      <h3 class="counter" data-target="15">0</h3>
-      <p>Years Experience</p>
+  <!-- Counter Stats Bar -->
+  <div class="counter-bar">
+    <div>
+      <div class="counter-val" data-target="15">0</div>
+      <div class="counter-lbl">Years Experience</div>
     </div>
-    <div class="stat-item">
-      <h3 class="counter" data-target="100">0</h3>
-      <p>% Fully Insured</p>
+    <div>
+      <div class="counter-val" data-target="100">0</div>
+      <div class="counter-lbl">% Fully Insured</div>
     </div>
-    <div class="stat-item">
-      <h3>5.0★</h3>
-      <p>Google Verified</p>
+    <div>
+      <div class="counter-val" style="color: #f59e0b;">5.0★</div>
+      <div class="counter-lbl">Google Verified</div>
     </div>
   </div>
 
-  <!-- Services Section -->
+  <!-- Services Grid -->
   <section class="section">
-    <span class="section-tag">What We Do</span>
-    <h2 class="section-title">Committed To Quality Roofing Services</h2>
+    <div class="section-head">
+      <span class="section-tag">Our Craftsmanship</span>
+      <h2 class="section-title">Committed To Quality Roofing Services</h2>
+    </div>
 
-    <div class="service-grid">
-      <!-- GRP Flat Roof -->
-      <div class="service-card fade-up">
-        <img src="hall-grp-flat.jpg" alt="GRP Flat Roofing Bolton">
-        <div class="service-body">
-          <h3>GRP Fibreglass Flat Roofing</h3>
-          <p>Seamless, watertight flat roofing solutions with integrated skylights, designed to withstand the harshest UK weather.</p>
-        </div>
-      </div>
-
-      <!-- Slate & Tile Installation -->
-      <div class="service-card fade-up">
-        <img src="hall-curved-slate.jpg" alt="Slate and Tile Roofing">
-        <div class="service-body">
-          <h3>Slate & Tile Roof Installations</h3>
-          <p>Expert tile laying, complete re-roofs, and architectural curved slate roof installations with precision finish.</p>
-        </div>
-      </div>
-
-      <!-- Roof Repairs & Leak Fixes -->
-      <div class="service-card fade-up">
-        <img src="hall-slate-pitch.jpg" alt="Roof Repairs & Maintenance">
-        <div class="service-body">
-          <h3>Roof Repairs & Storm Damage</h3>
-          <p>Fast detection and repair for leaks, cracked tiles, chimney leadwork, and ridge tile re-pointing.</p>
+    <!-- GRP Flat Roofing -->
+    <div class="service-card-pro">
+      <img src="hall-grp-flat.jpg" alt="GRP Flat Roofing with Skylight">
+      <div class="service-content">
+        <h3>GRP Fibreglass Flat Roofing</h3>
+        <p>Seamless 100% watertight flat roof installations featuring integrated glass skylights and high-durability perimeter trims.</p>
+        <div class="service-features">
+          <span>✓ 25+ Year Lifespan</span>
+          <span>✓ Zero Joint Leaks</span>
+          <span>✓ UV & Storm Proof</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Rotating Google Reviews Section -->
-  <section class="section" style="padding-top: 0;">
-    <div class="reviews-wrapper fade-up">
-      <div class="google-badge">⭐ Google Verified Reviews</div>
+    <!-- Slate & Tile Roofing -->
+    <div class="service-card-pro">
+      <img src="hall-curved-slate.jpg" alt="Curved Slate Roof Installation">
+      <div class="service-content">
+        <h3>Slate & Tile Roof Installations</h3>
+        <p>Architectural curved slate laying, modern ridge-pointing, and complete residential re-roofing projects.</p>
+        <div class="service-features">
+          <span>✓ Traditional Slate</span>
+          <span>✓ Curved Architecture</span>
+          <span>✓ Full Timber Battens</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roof Repairs & Leak Fixes -->
+    <div class="service-card-pro">
+      <img src="hall-slate-pitch.jpg" alt="Roof Repairs Bolton">
+      <div class="service-content">
+        <h3>Roof Repairs & Storm Damage</h3>
+        <p>Rapid leak response across Bolton. Chimney repointing, lead flashing restoration, and storm tile replacements.</p>
+        <div class="service-features">
+          <span>✓ Emergency Callouts</span>
+          <span>✓ Lead Flashing Repair</span>
+          <span>✓ Gutter Clearance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust & Quality Guarantee -->
+    <div class="trust-box">
+      <h3>🛡️ The Hall Roofing Standard</h3>
+      <p>"We genuinely care about doing the job properly rather than just getting it finished. Every roof is built to standard building regulations with clean, tidy site clearance."</p>
+    </div>
+
+    <!-- Google Review Slider -->
+    <div class="reviews-section">
+      <span style="color: var(--gold); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Google Verified Feedback</span>
       
-      <!-- Slide 1: Hannah Farrell -->
-      <div class="carousel-slide active">
-        <div class="stars">★★★★★</div>
-        <p class="review-quote">"From start to finish, Marten and the lads were brilliant. Always turned up when they said they would, and made sure everything was left clean and tidy. The quality of the workmanship is exceptional!"</p>
-        <div class="reviewer-name">Hannah Farrell</div>
-        <div class="reviewer-meta">Bolton Homeowner • New Roof Installation</div>
+      <div class="review-bubble">
+        <div id="review-container">
+          <div style="color: #f59e0b; font-size: 1.2rem; margin: 0.6rem 0;">★★★★★</div>
+          <p class="review-quote-text" id="quote-text">"From start to finish, Marten and the lads were brilliant. Always turned up on time and left everything clean and tidy. The quality of the new roof is exceptional!"</p>
+          <div class="reviewer-tag" id="author-name">Hannah Farrell</div>
+          <div class="reviewer-sub" id="author-meta">Bolton Homeowner • Full Re-Roofing</div>
+        </div>
       </div>
 
-      <!-- Slide 2: James Coll -->
-      <div class="carousel-slide">
-        <div class="stars">★★★★★</div>
-        <p class="review-quote">"Marten reinstated our GRP flat roof after we discovered a leak, and we couldn't be happier. Professional, polite, and hardworking. His communication and reliability were outstanding."</p>
-        <div class="reviewer-name">James & Jody Coll</div>
-        <div class="reviewer-meta">Breightmet Homeowner • GRP Flat Roof</div>
-      </div>
-
-      <!-- Dots -->
-      <div class="carousel-dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
+      <div style="display: flex; justify-content: center; gap: 6px; margin-top: 1rem;">
+        <div id="dot0" style="width: 20px; height: 6px; background: var(--red); border-radius: 3px;"></div>
+        <div id="dot1" style="width: 6px; height: 6px; background: #475569; border-radius: 3px;"></div>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Bottom Action Bar for Mobile -->
-  <div class="bottom-bar">
-    <a href="tel:+447961421976" style="background: var(--navy); color: white;">📞 Call Now</a>
-    <a href="https://wa.me/447961421976?text=Hi%20Marten,%20I%20would%20like%20a%20free%20quote." style="background: #16a34a; color: white;">💬 WhatsApp Quote</a>
+  <!-- Sticky Bottom Conversion Bar -->
+  <div class="sticky-bar">
+    <a href="tel:+447961421976" class="sticky-btn sticky-call">📞 Call Now</a>
+    <a href="https://wa.me/447961421976?text=Hi%20Marten,%20I%20would%20like%20a%20free%20quote%20for%20my%20roof." class="sticky-btn sticky-wa">💬 WhatsApp Quote</a>
   </div>
 
-  <!-- Scripts: 5-Second Carousel, Scroll Animations, Fast Counter -->
   <script>
-    // 1. Fast Number Counter (Runs quickly in under 1 second)
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
+    // Fast Counter
+    const counters = document.querySelectorAll('.counter-val');
+    counters.forEach(c => {
+      const target = +c.getAttribute('data-target');
       let count = 0;
-      const step = target / 25;
-      const timer = setInterval(() => {
+      const step = target / 20;
+      const interval = setInterval(() => {
         count += step;
         if (count >= target) {
-          counter.innerText = target + (target === 100 ? '%' : '+');
-          clearInterval(timer);
+          c.innerText = target + (target === 100 ? '%' : '+');
+          clearInterval(interval);
         } else {
-          counter.innerText = Math.ceil(count);
+          c.innerText = Math.ceil(count);
         }
-      }, 25);
+      }, 30);
     });
 
-    // 2. 5-Second Review Carousel
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
+    // Review Switcher (5s)
+    const reviews = [
+      {
+        quote: `"From start to finish, Marten and the lads were brilliant. Always turned up on time and left everything clean and tidy. The quality of the new roof is exceptional!"`,
+        name: "Hannah Farrell",
+        meta: "Bolton Homeowner • Full Re-Roofing"
+      },
+      {
+        quote: `"Marten reinstated our GRP flat roof after we discovered a leak, and we couldn't be happier. Professional, polite, and hardworking. Outstanding communication."`,
+        name: "James & Jody Coll",
+        meta: "Breightmet Homeowner • GRP Flat Roof"
+      }
+    ];
 
+    let rIndex = 0;
     setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
+      rIndex = (rIndex + 1) % reviews.length;
+      document.getElementById('quote-text').innerText = reviews[rIndex].quote;
+      document.getElementById('author-name').innerText = reviews[rIndex].name;
+      document.getElementById('author-meta').innerText = reviews[rIndex].meta;
       
-      currentSlide = (currentSlide + 1) % slides.length;
-      
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
+      document.getElementById('dot0').style.width = rIndex === 0 ? '20px' : '6px';
+      document.getElementById('dot0').style.background = rIndex === 0 ? 'var(--red)' : '#475569';
+      document.getElementById('dot1').style.width = rIndex === 1 ? '20px' : '6px';
+      document.getElementById('dot1').style.background = rIndex === 1 ? 'var(--red)' : '#475569';
     }, 5000);
-
-    // 3. Scroll Reveal Animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
-
